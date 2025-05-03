@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             label7 = new Label();
             label6 = new Label();
             btnIgroneClear = new Button();
@@ -47,22 +46,24 @@
             checkBox4 = new CheckBox();
             checkBox5 = new CheckBox();
             checkBox6 = new CheckBox();
+            btnSetFrom = new Button();
+            textLog = new TextBox();
+            groupBoxLog = new GroupBox();
+            trackBar1 = new TrackBar();
+            groupBox2 = new GroupBox();
+            groupBox1 = new GroupBox();
+            label1 = new Label();
+            groupBoxLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
+            groupBox2.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 17);
-            label1.TabIndex = 40;
-            label1.Text = "游戏窗口:";
             // 
             // label7
             // 
             label7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label7.AutoSize = true;
-            label7.Location = new Point(12, 308);
+            label7.Location = new Point(12, 160);
             label7.Name = "label7";
             label7.Size = new Size(83, 17);
             label7.TabIndex = 38;
@@ -73,7 +74,7 @@
             // 
             label6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Location = new Point(12, 275);
+            label6.Location = new Point(5, 55);
             label6.Name = "label6";
             label6.Size = new Size(59, 17);
             label6.TabIndex = 37;
@@ -82,7 +83,7 @@
             // btnIgroneClear
             // 
             btnIgroneClear.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnIgroneClear.Location = new Point(473, 270);
+            btnIgroneClear.Location = new Point(186, 50);
             btnIgroneClear.Name = "btnIgroneClear";
             btnIgroneClear.Size = new Size(64, 25);
             btnIgroneClear.TabIndex = 30;
@@ -93,7 +94,7 @@
             // btnAddIgrone
             // 
             btnAddIgrone.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnAddIgrone.Location = new Point(403, 271);
+            btnAddIgrone.Location = new Point(116, 51);
             btnAddIgrone.Name = "btnAddIgrone";
             btnAddIgrone.Size = new Size(64, 25);
             btnAddIgrone.TabIndex = 29;
@@ -104,7 +105,7 @@
             // btnStart
             // 
             btnStart.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnStart.Location = new Point(403, 13);
+            btnStart.Location = new Point(107, 22);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(64, 25);
             btnStart.TabIndex = 27;
@@ -115,9 +116,9 @@
             // btnClear
             // 
             btnClear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClear.Location = new Point(473, 13);
+            btnClear.Location = new Point(177, 22);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(64, 25);
+            btnClear.Size = new Size(52, 25);
             btnClear.TabIndex = 26;
             btnClear.Text = "清除";
             btnClear.UseVisualStyleBackColor = true;
@@ -129,10 +130,10 @@
             lstWindows.Columns.AddRange(new ColumnHeader[] { colHandle, colTitle, colOperation });
             lstWindows.FullRowSelect = true;
             lstWindows.GridLines = true;
-            lstWindows.Location = new Point(12, 44);
+            lstWindows.Location = new Point(9, 22);
             lstWindows.MultiSelect = false;
             lstWindows.Name = "lstWindows";
-            lstWindows.Size = new Size(525, 215);
+            lstWindows.Size = new Size(242, 108);
             lstWindows.TabIndex = 25;
             lstWindows.UseCompatibleStateImageBehavior = false;
             lstWindows.View = View.Details;
@@ -141,12 +142,12 @@
             // colHandle
             // 
             colHandle.Text = "句柄";
-            colHandle.Width = 100;
+            colHandle.Width = 80;
             // 
             // colTitle
             // 
             colTitle.Text = "标题";
-            colTitle.Width = 355;
+            colTitle.Width = 80;
             // 
             // colOperation
             // 
@@ -157,7 +158,7 @@
             // btnGetHandle
             // 
             btnGetHandle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnGetHandle.Location = new Point(311, 13);
+            btnGetHandle.Location = new Point(15, 22);
             btnGetHandle.Name = "btnGetHandle";
             btnGetHandle.Size = new Size(86, 25);
             btnGetHandle.TabIndex = 24;
@@ -169,17 +170,17 @@
             // txtIgroneKeys
             // 
             txtIgroneKeys.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtIgroneKeys.Location = new Point(75, 272);
+            txtIgroneKeys.Location = new Point(68, 52);
             txtIgroneKeys.Name = "txtIgroneKeys";
             txtIgroneKeys.ReadOnly = true;
-            txtIgroneKeys.Size = new Size(322, 23);
+            txtIgroneKeys.Size = new Size(45, 23);
             txtIgroneKeys.TabIndex = 41;
             // 
             // checkBox1
             // 
             checkBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(101, 307);
+            checkBox1.Location = new Point(101, 159);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(51, 21);
             checkBox1.TabIndex = 42;
@@ -191,7 +192,7 @@
             // 
             checkBox2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(158, 307);
+            checkBox2.Location = new Point(158, 159);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(51, 21);
             checkBox2.TabIndex = 43;
@@ -203,7 +204,7 @@
             // 
             checkBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(215, 307);
+            checkBox3.Location = new Point(215, 159);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(51, 21);
             checkBox3.TabIndex = 44;
@@ -215,7 +216,7 @@
             // 
             checkBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(272, 307);
+            checkBox4.Location = new Point(272, 159);
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new Size(58, 21);
             checkBox4.TabIndex = 45;
@@ -227,7 +228,7 @@
             // 
             checkBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(336, 307);
+            checkBox5.Location = new Point(336, 159);
             checkBox5.Name = "checkBox5";
             checkBox5.Size = new Size(58, 21);
             checkBox5.TabIndex = 46;
@@ -239,7 +240,7 @@
             // 
             checkBox6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             checkBox6.AutoSize = true;
-            checkBox6.Location = new Point(400, 307);
+            checkBox6.Location = new Point(400, 159);
             checkBox6.Name = "checkBox6";
             checkBox6.Size = new Size(58, 21);
             checkBox6.TabIndex = 47;
@@ -247,37 +248,113 @@
             checkBox6.UseVisualStyleBackColor = true;
             checkBox6.Visible = false;
             // 
+            // btnSetFrom
+            // 
+            btnSetFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSetFrom.Location = new Point(172, 16);
+            btnSetFrom.Name = "btnSetFrom";
+            btnSetFrom.Size = new Size(70, 25);
+            btnSetFrom.TabIndex = 48;
+            btnSetFrom.Text = "迷你";
+            btnSetFrom.UseVisualStyleBackColor = true;
+            btnSetFrom.Click += btnSetFrom_Click;
+            // 
+            // textLog
+            // 
+            textLog.Location = new Point(6, 17);
+            textLog.Multiline = true;
+            textLog.Name = "textLog";
+            textLog.Size = new Size(160, 70);
+            textLog.TabIndex = 49;
+            // 
+            // groupBoxLog
+            // 
+            groupBoxLog.Controls.Add(trackBar1);
+            groupBoxLog.Controls.Add(btnSetFrom);
+            groupBoxLog.Controls.Add(textLog);
+            groupBoxLog.Location = new Point(12, 186);
+            groupBoxLog.Name = "groupBoxLog";
+            groupBoxLog.Size = new Size(248, 144);
+            groupBoxLog.TabIndex = 50;
+            groupBoxLog.TabStop = false;
+            groupBoxLog.Text = "日志";
+            // 
+            // trackBar1
+            // 
+            trackBar1.Location = new Point(6, 93);
+            trackBar1.Maximum = 255;
+            trackBar1.Name = "trackBar1";
+            trackBar1.Size = new Size(236, 45);
+            trackBar1.TabIndex = 50;
+            trackBar1.Value = 255;
+            trackBar1.Scroll += trackBar1_Scroll;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(lstWindows);
+            groupBox2.Location = new Point(9, 12);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(257, 136);
+            groupBox2.TabIndex = 51;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "同步窗口";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btnGetHandle);
+            groupBox1.Controls.Add(txtIgroneKeys);
+            groupBox1.Controls.Add(btnClear);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(btnStart);
+            groupBox1.Controls.Add(btnIgroneClear);
+            groupBox1.Controls.Add(btnAddIgrone);
+            groupBox1.Location = new Point(273, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(270, 136);
+            groupBox1.TabIndex = 52;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Location = new Point(273, 202);
+            label1.Name = "label1";
+            label1.Size = new Size(158, 34);
+            label1.TabIndex = 53;
+            label1.Text = "F5：启动同步/关闭同步\r\nF6：启动修工事/关闭修工事";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(550, 340);
+            ClientSize = new Size(571, 342);
+            Controls.Add(label1);
+            Controls.Add(groupBox1);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBoxLog);
             Controls.Add(checkBox6);
             Controls.Add(checkBox5);
             Controls.Add(checkBox4);
             Controls.Add(checkBox3);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
-            Controls.Add(txtIgroneKeys);
-            Controls.Add(label1);
             Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(btnIgroneClear);
-            Controls.Add(btnAddIgrone);
-            Controls.Add(btnStart);
-            Controls.Add(btnClear);
-            Controls.Add(lstWindows);
-            Controls.Add(btnGetHandle);
             Name = "MainForm";
-            Text = "窗口多开同步器";
-            Load += MainForm_Load;
+            Text = "GreatMingCtu | 自我克隆体肉欲的交织与狂欢";
+            //Load += MainForm_Load;
+            groupBoxLog.ResumeLayout(false);
+            groupBoxLog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Label label7;
         private Label label6;
         private Button btnIgroneClear;
@@ -296,5 +373,12 @@
         private CheckBox checkBox4;
         private CheckBox checkBox5;
         private CheckBox checkBox6;
+        private Button btnSetFrom;
+        private TextBox textLog;
+        private GroupBox groupBoxLog;
+        private GroupBox groupBox2;
+        private GroupBox groupBox1;
+        private TrackBar trackBar1;
+        private Label label1;
     }
 }

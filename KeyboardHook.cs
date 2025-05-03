@@ -56,6 +56,9 @@ namespace WindowSync
                 if (hookSetSuccess == 0) Disconnect(); //如果设置钩子失败
             }
         }
+
+
+
         /// <summary>
         /// 断开监听钩子
         /// </summary>
@@ -117,7 +120,8 @@ namespace WindowSync
             public int time;
             public int dwExtraInfo;
             //此参数可以是以下消息之一： WM_KEYDOWN、 WM_KEYUP、 WM_SYSKEYDOWN或 WM_SYSKEYUP。 https://learn.microsoft.com/zh-cn/windows/win32/winmsg/lowlevelkeyboardproc
-            public int wParam; 
+            public int wParam;
+            public Point pt;
         }
     }
 }
